@@ -1,0 +1,51 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html, body{
+    width: 100%;
+    height: 100%;
+}
+
+#app{
+    position: relative;
+    height: 100%;
+    >.style{
+        position: absolute;
+        top: 0;
+        left: 0;
+        &.page1{
+            width: 0%;
+            height: 100%;
+            background-image: url(../images/main.jpg);
+            z-index: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        &.page2{
+            width: 100%;
+            height: 0%;
+            background-image: url(../images/CG01.png);
+            z-index: 2;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            >.content
+            >h1 ,p{
+                color: #fff;
+                text-align: center;
+                text-shadow: 0 3px 5px #000;
+                font-family: Arial, Helvetica, sans-serif;
+            }
+            >h1{
+                font-size: 100px;
+            }
+            >p{
+                font-size: 25;
+            }
+        }
+    }
+}

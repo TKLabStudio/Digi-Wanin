@@ -1,0 +1,71 @@
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+}
+
+#app {
+  position: relative;
+  height: 100%;
+}
+
+#app > .style {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+#app > .style.page1 {
+  width: 0%;
+  height: 100%;
+  background-image: url(../images/main.jpg);
+  z-index: 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#app > .style.page2 {
+  width: 100%;
+  height: 0%;
+  background-image: url(../images/CG01.png);
+  z-index: 2;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#app > .style.page2 > .content
+> h1, #app > .style.page2 p {
+  color: #fff;
+  text-align: center;
+  text-shadow: 0 3px 5px #000;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+#app > .style.page2 > h1 {
+  font-size: 100px;
+}
+
+#app > .style.page2 > p {
+  font-size: 25;
+}
+/*# sourceMappingURL=index.css.map */
