@@ -33,9 +33,15 @@ function setImageSrc(imgArr) {
   var html = "";
   for (var s = 0; s < imgArr.length; s++) {
     //document.getElementById("img" + (s + 1)).src = imgArr[s];
-    html += "<div>";
-    html += '<img src="' + imgArr[s] + '" alt="" />';
-    html += "</div>";
+    // html += "<div>";
+    // html += '<img src="' + imgArr[s] + '" alt="" />';
+    // html += "</div>";
+
+    html += `
+      <div>
+        <img src="${imgArr[s]}" alt="" />
+      </div>
+    `;
     console.log(s);
   }
   document.getElementById("app").innerHTML = html;
