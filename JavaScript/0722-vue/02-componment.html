@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>vue3</title>
+    <style>
+      #box1 {
+        width: 100px;
+        height: 100px;
+        background-color: brown;
+      }
+
+      #box2 {
+        width: 100px;
+        height: 100px;
+        background-color: blue;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="app">
+      <!-- <a href="javascript:;" @chick="handBoxOpen">show Red</a>
+      <br /> -->
+      <a href="javascript:;" @chick="handBoxChange">show Blue</a>
+      <div id="box1" v-show="isOpenBox"></div>
+      <div id="box2" v-show="!isOpenBox"></div>
+    </div>
+    <script src="https://unpkg.com/vue@next"></script>
+    <script>
+      const App = {
+        data() {
+          return {
+            isOpenBox: false,
+          };
+        },
+        methods: {
+          // handBoxOpen() {
+          //   this.isOpenBox = true;
+          //   console.log(this);
+          // },
+          handBoxChange() {
+            // this.isOpenBox = false;
+            // console.log(this);
+            this.isOpenBox = !this.isOpenBox;
+          },
+        },
+      };
+      Vue.createApp(App).mount("#app");
+    </script>
+  </body>
+</html>

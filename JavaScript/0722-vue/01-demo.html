@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>vue3</title>
+  </head>
+  <body>
+    <div id="app">
+      <h1 id="title">{{Int}}</h1>
+      <a href="javascript:;" @click="handAddInt">Add</a>
+      <br />
+      ----------------------------------------------------------------
+      <br />
+      <a :href="url">這是超連結</a>
+      <br />
+      <a href="javascript:;" @click="handChangeUrl">開啟連結</a>
+    </div>
+    <script src="https://unpkg.com/vue@next"></script>
+    <script>
+      const App = {
+        data() {
+          return {
+            Int: 0,
+            url: "javascript:;",
+          };
+        },
+        methods: {
+          handAddInt() {
+            this.Int++;
+          },
+          handChangeUrl() {
+            this.url = "https://www.google.com";
+          },
+        },
+      };
+      Vue.createApp(App).mount("#app");
+    </script>
+  </body>
+</html>
